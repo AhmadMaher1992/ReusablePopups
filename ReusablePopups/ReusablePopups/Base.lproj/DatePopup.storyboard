@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KMS-xy-DWr">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="7Wa-ty-nOQ">
+            <objects>
+                <viewController storyboardIdentifier="DatePopup" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KMS-xy-DWr" customClass="DatePopupVC" customModule="ReusablePopups" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kZd-X8-qCC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMA-dg-g72">
+                                <rect key="frame" x="20" y="283.5" width="374" height="329"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxv-u8-AVf">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
+                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fMk-a6-mcL">
+                                        <rect key="frame" x="0.0" y="49" width="374" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="589417468.39110398">
+                                            <!--2019-09-05 23:04:28 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTE-DU-9vG">
+                                        <rect key="frame" x="121" y="273" width="132" height="48"/>
+                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Save Date">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveDatePressed:" destination="KMS-xy-DWr" eventType="touchUpInside" id="Cga-Vy-4PX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bxv-u8-AVf" secondAttribute="trailing" id="4jr-9V-JDi"/>
+                                    <constraint firstItem="fMk-a6-mcL" firstAttribute="leading" secondItem="ZMA-dg-g72" secondAttribute="leading" id="DFy-mc-GCW"/>
+                                    <constraint firstItem="cTE-DU-9vG" firstAttribute="centerX" secondItem="ZMA-dg-g72" secondAttribute="centerX" id="HVD-i0-YL1"/>
+                                    <constraint firstItem="fMk-a6-mcL" firstAttribute="top" secondItem="bxv-u8-AVf" secondAttribute="bottom" constant="8" id="Mbg-IQ-NhU"/>
+                                    <constraint firstAttribute="trailing" secondItem="fMk-a6-mcL" secondAttribute="trailing" id="ST9-lP-70A"/>
+                                    <constraint firstItem="cTE-DU-9vG" firstAttribute="top" secondItem="fMk-a6-mcL" secondAttribute="bottom" constant="8" id="Ydq-l0-3oB"/>
+                                    <constraint firstItem="bxv-u8-AVf" firstAttribute="top" secondItem="ZMA-dg-g72" secondAttribute="top" id="mcZ-SE-T5e"/>
+                                    <constraint firstItem="bxv-u8-AVf" firstAttribute="leading" secondItem="ZMA-dg-g72" secondAttribute="leading" id="qPR-FG-ELg"/>
+                                    <constraint firstAttribute="bottom" secondItem="cTE-DU-9vG" secondAttribute="bottom" constant="8" id="uYH-BU-mtN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.036694462435233111" green="0.036694462435233111" blue="0.036694462435233111" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZMA-dg-g72" firstAttribute="leading" secondItem="psP-G7-RPf" secondAttribute="leading" constant="20" id="9py-9t-Ele"/>
+                            <constraint firstItem="ZMA-dg-g72" firstAttribute="centerY" secondItem="kZd-X8-qCC" secondAttribute="centerY" id="uWJ-28-hqs"/>
+                            <constraint firstItem="psP-G7-RPf" firstAttribute="trailing" secondItem="ZMA-dg-g72" secondAttribute="trailing" constant="20" id="xh0-Ob-O3n"/>
+                            <constraint firstItem="ZMA-dg-g72" firstAttribute="centerX" secondItem="kZd-X8-qCC" secondAttribute="centerX" id="yYC-wb-94h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="psP-G7-RPf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="hgr-5r-KqV"/>
+                    <connections>
+                        <outlet property="datePicker" destination="fMk-a6-mcL" id="xPi-OZ-Q3w"/>
+                        <outlet property="saveBtn" destination="cTE-DU-9vG" id="WH1-KR-cao"/>
+                        <outlet property="titleLbl" destination="bxv-u8-AVf" id="9wk-ha-EhW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6X4-JP-0TK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657" y="-153"/>
+        </scene>
+    </scenes>
+</document>
