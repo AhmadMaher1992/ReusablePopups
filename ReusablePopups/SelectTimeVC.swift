@@ -12,11 +12,10 @@ class SelectTimeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+  
        
     }
-    
-    
+   
     @IBAction func selectTime(_ sender: UIButton) {
         let sb = UIStoryboard(name: "DatePopup", bundle: nil)
         let popUp = sb.instantiateViewController(withIdentifier: "DatePopup") as! DatePopupVC

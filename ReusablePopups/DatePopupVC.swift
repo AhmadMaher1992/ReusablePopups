@@ -14,6 +14,7 @@ class DatePopupVC: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var saveBtn: UIButton!
     var showTimePicker: Bool = false
+    var onSave: ((_ data: String) -> ())?
     
     //Formatted Date
     var formattedDate: String {
@@ -40,6 +41,12 @@ class DatePopupVC: UIViewController {
 
     @IBAction func saveDatePressed(_ sender: UIButton) {
         NotificationCenter.default.post(name: .saveDataTime, object: self)
+        if showTimePicker {
+            onSave?(formattedTime)
+        }else{
+            onSave?(formattedDate)
+        }
+        
         dismiss(animated: true)
     }
     
