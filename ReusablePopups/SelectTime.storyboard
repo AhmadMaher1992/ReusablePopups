@@ -16,13 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eu1-tq-Ots">
-                                <rect key="frame" x="313" y="64" width="81" height="30"/>
-                                <state key="normal" title="Select Time"/>
-                                <connections>
-                                    <action selector="selectTime:" destination="zsW-Tz-vgC" eventType="touchUpInside" id="b40-OQ-Ctj"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0P-MD-NfO">
                                 <rect key="frame" x="26" y="81" width="170" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -30,16 +23,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eu1-tq-Ots">
+                                <rect key="frame" x="313" y="63" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select Time"/>
+                                <connections>
+                                    <action selector="selectTime:" destination="zsW-Tz-vgC" eventType="touchUpInside" id="b40-OQ-Ctj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Eu1-tq-Ots" firstAttribute="top" secondItem="ixg-sM-gaA" secondAttribute="top" constant="20" id="310-nD-tZi"/>
-                            <constraint firstItem="ixg-sM-gaA" firstAttribute="trailing" secondItem="Eu1-tq-Ots" secondAttribute="trailing" constant="20" id="W9V-2W-gxr"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ixg-sM-gaA"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="recents" id="rkX-6g-EeD"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="timeLbl" destination="j0P-MD-NfO" id="zF3-Zo-G8B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igw-Uh-pv6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
