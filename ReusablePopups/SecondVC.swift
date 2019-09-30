@@ -20,9 +20,13 @@ class SecondVC: UIViewController {
 
        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            if  segue.identifier == "DatePopupVC" {
-               let popUp = segue.destination as? DatePopupVC
-                popUp?.showTimePicker = false
-            popUp?.onSave = onSave
+               let popUp = segue.destination as! DatePopupVC
+                popUp.showTimePicker = false
+           // popUp.onSave = onSave
+            popUp.onSave = {(data) in
+                self.dateLbl.text = data
+                
+            }
            }
            
        }
